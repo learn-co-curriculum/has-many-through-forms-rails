@@ -195,6 +195,7 @@ Still, there's a problem. We're creating a new category each time, regardless of
 class Post < ActiveRecord::Base
   has_many :post_categories
   has_many :categories, through: :post_categories
+	accepts_nested_attributes_for :categories
 
 
   def categories_attributes=(category_attributes)
@@ -218,3 +219,5 @@ As you can see, it doesn't really matter how complex our associations are - Acti
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/has-many-through-forms-rails'>Has Many Through in Forms</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/has-many-through-forms-rails'>Has Many Through in Forms</a> on Learn.co and start learning to code for free.</p>
